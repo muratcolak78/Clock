@@ -1,0 +1,37 @@
+﻿<Window x:Class="Clock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clock"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MainWindowVM/>
+    </Window.DataContext>
+    <Grid>
+        <TextBlock 
+            Text="{Binding Clock}" 
+            FontSize="24" Margin="562,10,66,359" FontWeight="Bold" />
+
+        <TextBlock
+            Text="{Binding Puls, StringFormat={}{0:F2}}"
+            FontSize="40" Margin="641,166,10,183" FontWeight="Bold" />
+        <Label x:Name="Clock" Content="Uhrzeit" HorizontalAlignment="Left" Margin="457,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+        <Label x:Name="Clock_Kopieren" Content="Rest" HorizontalAlignment="Left" Margin="17,58,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <Label x:Name="Clock_Kopieren1" Content="Puls" HorizontalAlignment="Left" Margin="457,160,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <TextBox x:Name="txtbxRest" Text="{Binding Rest, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="162,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="40"/>
+        <Label Content="Geben Sie Rest ein" HorizontalAlignment="Left" Margin="17,20,0,0" VerticalAlignment="Top" Width="230" FontWeight="Bold" FontSize="18"/>
+        <Label Content="Geben Sie die Dauer der Übung ein" HorizontalAlignment="Left" Margin="17,126,0,0" VerticalAlignment="Top" Width="326" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="Clock_Kopieren2" Content="Minute" HorizontalAlignment="Left" Margin="19,169,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <TextBox x:Name="txtbxMinute" Text="{Binding Minute, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="162,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="40"/>
+        <Label x:Name="Clock_Kopieren3" Content="Schalter" HorizontalAlignment="Left" Margin="455,75,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <Button Content="{Binding StartButtonText}" Command="{Binding Start}" HorizontalAlignment="Left" Height="92" Margin="17,272,0,0" VerticalAlignment="Top" Width="265" FontSize="40" FontWeight="Bold"/>
+        <TextBlock Foreground="Red" Text="{Binding Second}" HorizontalAlignment="Left" Margin="641,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" FontSize="40" FontWeight="Bold" Height="49"/>
+        <Label x:Name="Clock_Kopieren4" Content="Stufe" HorizontalAlignment="Left" Margin="457,261,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <TextBlock
+            Text="{Binding Stufe}"
+            FontSize="40" Margin="641,268,93,81" FontWeight="Bold" />
+        <Label x:Name="Clock_Kopieren5" Content="{Binding Geschwindigkeit}" HorizontalAlignment="Left" Margin="651,367,0,0" VerticalAlignment="Top" FontSize="20" Height="44" Width="83"/>
+    </Grid>
+</Window>
