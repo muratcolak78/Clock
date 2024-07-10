@@ -25,7 +25,7 @@
         <Label Content="Geben Sie die Dauer der Übung ein" HorizontalAlignment="Left" Margin="17,126,0,0" VerticalAlignment="Top" Width="326" FontWeight="Bold" FontSize="18"/>
         <Label x:Name="Clock_Kopieren2" Content="Minute" HorizontalAlignment="Left" Margin="19,169,0,0" VerticalAlignment="Top" FontSize="40"/>
         <TextBox x:Name="txtbxMinute" Text="{Binding Minute, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="162,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="40"/>
-        <Label x:Name="Clock_Kopieren3" Content="Schalter" HorizontalAlignment="Left" Margin="455,75,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <Label x:Name="Clock_Kopieren3" Content="Sekunde" HorizontalAlignment="Left" Margin="455,75,0,0" VerticalAlignment="Top" FontSize="40"/>
         <Button Content="{Binding StartButtonText}" Command="{Binding Start}" HorizontalAlignment="Left" Height="92" Margin="17,272,0,0" VerticalAlignment="Top" Width="265" FontSize="40" FontWeight="Bold"/>
         <TextBlock Foreground="Red" Text="{Binding Second}" HorizontalAlignment="Left" Margin="641,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" FontSize="40" FontWeight="Bold" Height="49"/>
         <Label x:Name="Clock_Kopieren4" Content="Stufe" HorizontalAlignment="Left" Margin="457,261,0,0" VerticalAlignment="Top" FontSize="40"/>

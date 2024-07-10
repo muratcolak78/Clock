@@ -145,6 +145,12 @@ namespace Clock
                 CountDown.Stop();
                 MessageBox.Show("Training beendet");
                 StufeController.Stop();
+                Rest = 0;
+                Puls = 0;
+                Minute = 0;
+                Stufe = 0;
+                Geschwindigkeit = 0;
+                IsRunning = !IsRunning;
             }
             Puls += grt.Geschwindigkeit;
             //OnPropertyChanged(nameof(Puls));
@@ -181,6 +187,8 @@ namespace Clock
                 Minute = 0;
                 Stufe = 0;
                 Geschwindigkeit = 0.17;
+               
+
             }
             IsRunning = !IsRunning; // Durumu tersine çevir
         }
